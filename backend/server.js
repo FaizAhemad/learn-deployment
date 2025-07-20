@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 // ✅ Define allowed frontend origins
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://learn-deployment-cd51yhfy4-faiz-ahemads-projects.vercel.app/' // Replace with your actual deployed frontend URL
+    'https://learn-deployment-cd51yhfy4-faiz-ahemads-projects.vercel.app' // Replace with your actual deployed frontend URL
 ];
 
 
