@@ -1,10 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import {useEffect, useState} from "react";
+import "./App.css";
+import reactLogo from "./assets/react.svg";
+import config from "./config/config.json";
+import viteLogo from "/vite.svg";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    fetch(config.endpoint)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+      })
+      .catch((e) => {
+        console.error("There was a problem with the fetch operation:", e);
+      });
+    console.log("here");
+  }, []);
 
   return (
     <>
@@ -29,7 +42,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
