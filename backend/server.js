@@ -10,6 +10,7 @@ const allowedOrigins = [
     'https://learn-deployment-cd51yhfy4-faiz-ahemads-projects.vercel.app/' // Replace with your actual deployed frontend URL
 ];
 
+
 // ✅ Enable CORS with origin filtering
 app.use(cors({
     origin: (origin, callback) => {
